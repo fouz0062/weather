@@ -4,8 +4,8 @@ import Image from 'next/image';
 const Weather = ({ data }) => {
     console.log(data)
   return (
-      <div className='relative max-w-[500px] m-auto mt-5'>
-          <div className='flex justify-between items-center font-bold text-white p-4 shadow-lg bg-black/40 rounded-md'>
+      <div className='relative inpt m-auto mt-5'>
+          <div className='flex justify-between items-center font-bold text-white p-4 shadow-lg bg-black/40 rounded-md result'>
               <div>
                   {/* <Image
                       alt="/"
@@ -21,7 +21,7 @@ const Weather = ({ data }) => {
           {/* bottom */}
           <div className='bg-black/50 text-white mt-8 px-4 py-3 text-center rounded-md'>
               <p className='text-3xl py-3'>Weather in {data.name}</p>
-              <div className='flex justify-between items-center py-10'>
+              <div className='flex justify-between items-center result'>
                   <div>
                       <p className='text-xl font-bold'>{data.main.feels_like.toFixed(0)}&#176; F</p>
                       <p className='pt-2'>Feels like</p>
