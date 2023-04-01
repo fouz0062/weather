@@ -15,7 +15,7 @@ export default function Home() {
     inputEl.current.focus()
   },[])
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${process.env.PUBLIC_WEATHER_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=6f9e759689d71f9ca6fd139fcda568c0`;
 
   const fetchData = (e) => {
     e.preventDefault();
@@ -27,9 +27,6 @@ export default function Home() {
     setLoading(false)
   }
 
-  if (loading) {
-    return <Spinner/> 
-  } else {
     return (
   <>
       <Head>
@@ -63,5 +60,3 @@ export default function Home() {
     </>
   );
   }
-  
-}
