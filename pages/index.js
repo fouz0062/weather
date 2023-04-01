@@ -4,12 +4,10 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import Weather from "@/components/Weather";
-import Spinner from "@/components/spinner";
 
 export default function Home() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState({});
-  const [loading, setLoading] = useState(false);
   const inputEl = useRef(null);
   useEffect(() => {
     inputEl.current.focus()
@@ -19,12 +17,10 @@ export default function Home() {
 
   const fetchData = (e) => {
     e.preventDefault();
-    setLoading(true)
     axios.get(url).then((res) => {
       setWeather(res.data);
     })
     setCity("")
-    setLoading(false)
   }
 
     return (
